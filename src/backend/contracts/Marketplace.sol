@@ -99,4 +99,8 @@ contract Marketplace is ReentrancyGuard {
     function getTotalPrice(uint _itemId) view public returns(uint){
         return((items[_itemId].price*(100 + feePercent))/100);
     }
+    //withdraw funds in the contract
+    // function withdraw() public{
+    //     payable(msg.sender).transfer(address(this).balance);
+    // }
 }
